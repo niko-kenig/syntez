@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Перенаправление...</title>
     <script>
-      // Redirect to the base URL with the current path
+      // GitHub Pages автоматически перенаправляет 404 на index.html
+      // Этот скрипт поможет с обработкой маршрутов
+      const segments = window.location.pathname.split('/');
       const base = '/syntez';
-      const path = window.location.pathname;
-      // Remove the base from the path if it's already there
-      const cleanPath = path.startsWith(base) ? path.slice(base.length) : path;
-      // Redirect to the base URL with the clean path
-      window.location.href = `${base}${cleanPath}${window.location.search}${window.location.hash}`;
+      
+      // Проверяем, не находимся ли мы уже на правильном пути
+      if (!window.location.pathname.startsWith(base + '/') && window.location.pathname !== base) {
+        const newPath = base + window.location.pathname + window.location.search + window.location.hash;
+        window.history.replaceState({}, '', newPath);
+      }
+      
+      // Перенаправляем на index.html для обработки SPA-маршрутизации
+      window.location.replace(base + '/index.html' + window.location.search + window.location.hash);
     </script>
   </head>
   <body>
-    <p>Перенаправление...</p>
+    <p>Перенаправление на главную страницу...</p>
   </body>
 </html>
