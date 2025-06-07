@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Перенаправление...</title>
+    <script>
+      // Redirect to the base URL with the current path
+      const base = '/syntez';
+      const path = window.location.pathname;
+      // Remove the base from the path if it's already there
+      const cleanPath = path.startsWith(base) ? path.slice(base.length) : path;
+      // Redirect to the base URL with the clean path
+      window.location.href = `${base}${cleanPath}${window.location.search}${window.location.hash}`;
+    </script>
+  </head>
+  <body>
+    <p>Перенаправление...</p>
+  </body>
+</html>
