@@ -1,0 +1,418 @@
+.imgMain {
+  background-image: url("../../assets/images/products/home.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 550px;
+  margin-top: 10px;
+  border-radius: 10px;
+  //box-shadow: 5px 5px 10px rgb(32, 47, 93);
+
+  .container {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  h1 {
+    //width: 50rem;
+    font: 70px Montserrat, sans-serif;
+    color: #f6faf5;
+    //margin: 0px 100px 0px 40px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+    text-shadow: 9px -4px 9px rgb(34, 155, 243);
+    font-weight: 700;
+    line-height: 7rem;
+  }
+
+.hero {
+  text-align: center;
+  margin-left: 8rem;
+  width: 30rem;
+  border: 2px solid white;
+  border-radius: 5px;
+  transform: skew(-48deg);
+  box-shadow: -5px 0px 29px rgb(34, 155, 243);
+  .heroDeg {
+    transform: skew(48deg);
+    padding: 10px 0;
+  }
+  .slogan {
+    letter-spacing: 0.05em;
+    font: 50px Montserrat, sans-serif;
+    text-align: right;
+    color: #f6faf5;
+    animation: fadeIn 1s ease forwards;
+    text-shadow: 2px -4px 9px rgb(34, 155, 243);
+    font-weight: 500;
+    line-height: 3.5rem;
+    display: block;
+  }
+  .slogan2 {
+    letter-spacing: 0.05em;
+    font: 40px Montserrat, sans-serif;
+    color: #f6faf5;
+    text-align: left;
+    animation: fadeIn 1s ease forwards;
+    text-shadow: 2px -4px 9px rgb(34, 155, 243);
+    font-weight: 500;
+    line-height: 3.5rem;
+    display: block;
+    margin-left: 0.8rem;
+  }
+  .slogan3 {
+    letter-spacing: 0.05em;
+    font: 40px Montserrat, sans-serif;
+    color: #f6faf5;
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+    text-shadow: 2px -4px 9px rgb(34, 155, 243);
+    font-weight: 500;
+    line-height: 3.5rem;
+    display: block;
+  }
+}
+
+  button {
+    background-color: #229bf3;
+    color: white;
+    font: 20px Rubik, sans-serif;
+    margin: 40px 0 0 40px;
+
+
+    &:hover {
+      border: 2px solid #dfe6ea;
+      box-shadow: 1px 1px 1px rgb(246, 250, 245);
+      transition: 200ms;
+    }
+  }
+
+  .card {
+    font: 12px Rubik, sans-serif;
+    width: 90px;
+    flex-direction: column;
+    display: flex;
+    padding-top: 40px;
+    margin-left: 2.5rem;
+
+    span{
+      display: inline-block;
+    }
+
+    .line {
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #229bf3;
+        margin: 5px 0;
+      }
+    }
+
+    .headerSpan {
+      font: 24px Rubik, sans-serif;
+      font-weight: 700;
+
+    }
+  }
+
+}
+
+h3 {
+  font: 30px Montserrat, sans-serif;
+  color: black;
+  text-align: left;
+  margin: 50px 0 0px 0;
+  letter-spacing: 0.05em;
+  animation: fadeIn 1s ease forwards;
+
+}
+
+section {
+  border-radius: 10px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7),
+          rgba(255, 255, 255, 0.7)), url("../../assets/images/background/bgSlider.png");
+  background-size: 110% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  h3 {
+    font: 30px Montserrat, sans-serif;
+    color: black;
+    text-align: left;
+    margin: 30px 0 5px 0;
+    letter-spacing: 0.05em;
+    animation: fadeIn 1s ease forwards;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 3px;
+      background-color: #3498db;
+    }
+  }
+
+
+
+  .containerSlider {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0 0 0;
+  }
+
+  .imgContainer {
+    object-fit: cover;
+  }
+
+  .caruselHome {
+    width: 100%;
+    height: 10rem;
+    margin-top: 40px;
+  }
+
+}
+
+.line {
+  margin: 0 0 10px 0;
+  color: #1b90e5;
+}
+
+.secondSection {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.8)), url("../../assets/images/background/whyWeBest.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+  .imgMain {
+    background-image: url("../../assets/images/products/home.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 550px;
+    margin-top: 10px;
+    border-radius: 10px;
+    //box-shadow: 5px 5px 10px rgb(32, 47, 93);
+
+    .container {
+      display: flex;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      width: 30rem;
+      font: 70px Montserrat, sans-serif;
+      color: #f6faf5;
+      margin: 15px 100px 0px 40px;
+      letter-spacing: 0.05em;
+      animation: fadeIn 1s ease forwards;
+      text-shadow: 9px -4px 9px rgb(34, 155, 243);
+      font-weight: 700;
+    }
+
+    button {
+      background-color: #229bf3;
+      color: white;
+      font: 20px Rubik, sans-serif;
+      margin: 40px 0 0 40px;
+
+
+      &:hover {
+        border: 2px solid #dfe6ea;
+        box-shadow: 1px 1px 1px rgb(246, 250, 245);
+        transition: 200ms;
+      }
+    }
+
+    .card {
+      font: 12px Rubik, sans-serif;
+      width: 90px;
+      flex-direction: column;
+      display: flex;
+      padding-top: 40px;
+      margin-left: 160px;
+
+      span{
+        display: inline-block;
+      }
+
+      .line {
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: #229bf3;
+          margin: 5px 0;
+        }
+      }
+
+      .headerSpan {
+        font: 24px Rubik, sans-serif;
+        font-weight: 700;
+
+      }
+    }
+
+  }
+
+  h3 {
+    font: 30px Montserrat, sans-serif;
+    color: black;
+    text-align: left;
+    margin: 50px 0 0px 0;
+    letter-spacing: 0.05em;
+    animation: fadeIn 1s ease forwards;
+
+  }
+
+  section {
+    border-radius: 10px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.7)), url("../../assets/images/background/bgSlider.png");
+    background-size: 110% auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+    h3 {
+      font: 30px Montserrat, sans-serif;
+      color: black;
+      text-align: left;
+      margin: 30px 0 5px 0;
+      letter-spacing: 0.05em;
+      animation: fadeIn 1s ease forwards;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 3px;
+        background-color: #3498db;
+      }
+    }
+
+
+
+    .containerSlider {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 5px 0 0 0;
+    }
+
+    .imgContainer {
+      object-fit: cover;
+    }
+
+    .caruselHome {
+      width: 100%;
+      height: 10rem;
+      margin-top: 40px;
+    }
+
+  }
+
+  .line {
+    margin: 0 0 10px 0;
+    color: #1b90e5;
+  }
+
+  .secondSection {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0.8)), url("../../assets/images/background/whyWeBest.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 100px;
+      gap: 65px;
+      flex-wrap: wrap;
+    }
+    .card {
+      width: 296px;
+      height: 121px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 30px 20px;
+      border: 1px solid grey;
+      border-radius: 5px;
+      font-size: 18px;
+      color: black;
+      gap: 10px;
+      box-shadow: 1px 1px 1px rgb(5, 5, 5);
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    gap: 65px;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 296px;
+    height: 121px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 18px;
+    color: black;
+    gap: 10px;
+    box-shadow: 1px 1px 1px rgb(5, 5, 5);
+  }
+}

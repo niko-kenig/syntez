@@ -1,0 +1,226 @@
+.productsContainer {
+  width: 100%;
+  margin-top: 10px;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 15px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20rem;
+      height: 3px;
+      background-color: #3498db;
+    }
+  }
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+
+  // Если карточек 5 — создаем контейнер для нижнего ряда
+  &:has(> :nth-child(5):last-child) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    
+    > * {
+      flex: 0 0 calc(33.333% - 20px);
+      max-width: calc(33.333% - 20px);
+    }
+    
+    > :nth-child(1),
+    > :nth-child(2),
+    > :nth-child(3) {
+      margin-bottom: 30px;
+    }
+    
+    > :nth-child(4),
+    > :nth-child(5) {
+      flex: 0 0 calc(33.333% - 20px);
+      max-width: calc(33.333% - 20px);
+      margin: 0;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.productCard {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: var(--delay, 0s);
+  will-change: opacity, transform;
+  
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  // Staggered delay for each card
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  background: white;
+  border: 1px solid #eaeaea;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  &:hover {
+    transform: translateY(-10px) translateZ(0);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+    
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 70%; /* 4:3 Aspect Ratio */
+  overflow: hidden;
+}
+
+.productImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  .card:hover & {
+    transform: scale(1.05) translateZ(0);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+    
+    .card:hover & {
+      transform: none;
+    }
+  }
+}
+
+.productTitle {
+  padding: 20px;
+  margin: 0;
+  font-size: 1.2em;
+  color: #2c3e50;
+  text-align: center;
+  background: white;
+  border-top: 1px solid #f0f0f0;
+}
+
+@media (max-width: 1024px) {
+  .productsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    
+    &:has(> :nth-child(5):last-child) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      
+      > * {
+        flex: none;
+        max-width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}
+
+/* Мобильные: 1 в ряд */
+@media (max-width: 768px) {
+  .productsGrid {
+    &:has(> :nth-child(5):last-child) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      > * {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+  
+  .productsContainer {
+    padding: 30px 15px;
+
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 30px;
+    }
+  }
+
+  .productsGrid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    gap: 20px;
+    > * {
+      grid-column: auto !important;
+      grid-row: auto !important;
+    }
+  }
+
+  .productCard {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+}

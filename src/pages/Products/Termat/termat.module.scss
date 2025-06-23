@@ -1,0 +1,226 @@
+.taigaContainer {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  min-height: 100vh;
+
+  .contentContainer {
+    width: 100%;
+    margin: 20px auto 0;
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+    h1 {
+      text-align: center;
+      margin: 0 0 30px 0;
+      color: #2c3e50;
+      font-size: 2.2em;
+      position: relative;
+      padding-bottom: 15px;
+    }
+  }
+}
+
+.sliderContainer {
+  width: 100%;
+  margin: 0 0 50px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+
+  .carousel {
+    width: 100%;
+
+    .slide {
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .control-dots {
+      display: none;
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+  height: 250px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.slide {
+  flex: 1;
+  height: 70%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:nth-child(1) {
+    height: 50%;
+    flex: 0.7;
+  }
+
+  &:nth-child(2) {
+    height: 60%;
+    flex: 0.8;
+  }
+
+  &:nth-child(3) {
+    height: 70%;
+    flex: 0.9;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.description {
+  flex: 1;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+
+  h2 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin: 1.5em 0 0.8em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #3498db;
+    position: relative;
+  }
+
+  .descriptionBlock {
+    margin-bottom: 2em;
+
+    p {
+      margin: 0.5em 0 0;
+      color: #2c3e50;
+      line-height: 1.7;
+    }
+  }
+
+  .features, .benefits {
+    margin-bottom: 2em;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 1em 0 0;
+
+      li {
+        position: relative;
+        padding-left: 1.8em;
+        margin-bottom: 0.8em;
+        color: #2c3e50;
+
+        &::before {
+          content: '•';
+          color: #3498db;
+          font-weight: bold;
+          font-size: 1.2em;
+          position: absolute;
+          left: 0;
+          top: -0.1em;
+        }
+      }
+    }
+  }
+
+  .summary {
+    background-color: #f8f9fa;
+    padding: 1.2em;
+    border-radius: 6px;
+    border-right: 3px solid #3498db;
+    margin: 1.5em 0 0;
+    font-style: italic;
+    color: #2c3e50;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentContainer {
+    padding: 30px 15px;
+    margin-top: 20px;
+  }
+
+  .sliderContainer {
+    margin: 0 0 40px;
+    padding: 15px;
+
+    .carousel {
+      height: 220px;
+    }
+  }
+
+  .slider {
+    height: 220px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentContainer {
+    padding: 20px 10px;
+    margin-top: 15px;
+  }
+
+  .sliderContainer {
+    margin: 0 0 30px;
+    padding: 10px;
+
+    .carousel {
+      height: 180px;
+    }
+  }
+
+  .slider {
+    height: 180px;
+    gap: 4px;
+
+    .slide {
+      &:nth-child(1) {
+        height: 40%;
+      }
+
+      &:nth-child(2) {
+        height: 50%;
+      }
+
+      &:nth-child(3) {
+        height: 60%;
+      }
+    }
+  }
+}

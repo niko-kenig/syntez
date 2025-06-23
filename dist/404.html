@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Перенаправление...</title>
+    <script>
+      // GitHub Pages автоматически перенаправляет 404 на index.html
+      // Этот скрипт поможет с обработкой маршрутов
+      const segments = window.location.pathname.split('/');
+      const base = '/syntez';
+      
+      // Проверяем, не находимся ли мы уже на правильном пути
+      if (!window.location.pathname.startsWith(base + '/') && window.location.pathname !== base) {
+        const newPath = base + window.location.pathname + window.location.search + window.location.hash;
+        window.history.replaceState({}, '', newPath);
+      }
+      
+      // Перенаправляем на index.html для обработки SPA-маршрутизации
+      window.location.replace(base + '/index.html' + window.location.search + window.location.hash);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

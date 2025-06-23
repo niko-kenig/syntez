@@ -1,0 +1,81 @@
+.secondSection {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.8)), url("../../../assets/images/background/whyWeBest.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    gap: 65px;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 296px;
+    height: 121px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 18px;
+    color: black;
+    gap: 10px;
+    box-shadow: 1px 1px 1px rgb(5, 5, 5);
+    background: #fff;
+    opacity: 1;
+    transition: box-shadow 0.3s;
+    will-change: transform, opacity;
+  }
+
+  .cardHidden {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: opacity 0.6s, transform 0.6s;
+  }
+
+  .slideInLeft {
+    opacity: 1;
+    animation: slideInLeftAnim 0.7s cubic-bezier(0.25,0.8,0.25,1) forwards;
+  }
+
+  .slideInRight {
+    opacity: 1;
+    animation: slideInRightAnim 0.7s cubic-bezier(0.25,0.8,0.25,1) forwards;
+  }
+
+  @keyframes slideInLeftAnim {
+    from {
+      opacity: 0;
+      transform: translateX(-80px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  @keyframes slideInRightAnim {
+    from {
+      opacity: 0;
+      transform: translateX(80px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+}
