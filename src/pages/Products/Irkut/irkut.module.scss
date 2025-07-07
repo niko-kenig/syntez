@@ -190,7 +190,6 @@
   }
 }
 
-/* Image styling */
 .imageContainer {
   margin: 1.5em 0;
   overflow: hidden;
@@ -203,17 +202,14 @@
   }
   
   .imageLeft {
-    float: left;
-    display: inline-block;
-    width: 200px;
-    margin: 0 25px 15px 0;
-  }
-  
-  .imageRight {
+
     float: right;
-    margin: 0 0 15px 25px;
+    display: inline-block;
+    width: 280px;
+    margin: 20px;
   }
   
+
   p {
     text-align: justify;
     margin-bottom: 1em;
@@ -262,7 +258,7 @@
 }
 .more{
   display: inline-block;
-  width: 80%;
+  width: 100%;
 }
 
 @media (max-width: 480px) {
@@ -282,4 +278,11 @@
       font-size: 1.3em;
     }
   }
+}
+
+.imageRight {
+  float: right;
+  display: inline-block;
+  width: 320px;
+  margin: 20px;
 }

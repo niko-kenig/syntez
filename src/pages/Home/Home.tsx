@@ -22,14 +22,16 @@ import SecondSection from "./SecondSection/SecondSection.tsx";
 
 export const arrayWhy = [{icon: house1, about: 'Продукция \n' + ' высокого качества'},
     {
-        icon: house2, about: 'Персональный \n' +
-            'подход к каждому клиенту'
+        icon: house2, about: 'Профессиональный интерес \n' +
+            ' в сфере производимых материалов'
     },
     {
-        icon: house3, about: 'Скидки и бонусы постоянным \n' +
-            'клиентам'
+        icon: house3, about: 'Техническая поддержка применения  \n' +
+            ' продукции'
     },
-    {icon: house4, about: 'Предоставление отсрочки оплаты'},
+    {icon: house4, about: 'Передаём опыт \n' +
+            ' успешного применения'
+    },
     {icon: house5, about: 'Помощь в подборе концентрации продуктов'},
     {icon: house6, about: 'Доставим продукцию по всей России'}
 ]

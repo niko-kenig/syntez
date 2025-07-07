@@ -14,7 +14,7 @@ const Header = () => {
                     <Link to={'/'}>
                         <img src={logo} alt="logotip" className={styles.logoImg}/>
                         <p className={styles.address}><b>АДРЕС:</b>Россия, 664001 г.Иркутск<br/>
-                            ул. Байкалськая 273А</p>
+                            ул. Байкальcкая 273А</p>
                     </Link>
                 </div>
                 <ul>

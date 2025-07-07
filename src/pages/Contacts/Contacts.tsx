@@ -10,12 +10,13 @@ const Contacts = () => {
                 <div className={styles.contactInfo}>
                     <h2>По вопросам консультаций</h2>
                     <div className={styles.contactItem}>
-                        <span className={styles.contactLabel}>Телефон:</span>
-                        <a href="tel:+73952564497" className={styles.contactLink}>+7 (3952) 56-44-97</a>
-                    </div>
-                    <div className={styles.contactItem}>
-                        <span className={styles.contactLabel}>Мобильный:</span>
-                        <a href="tel:+79648007745" className={styles.contactLink}>+7 (964) 800-77-45</a>
+                        <span className={styles.contactLabel}>Телефоны:</span>
+                        <ul>
+                            <li><a href="tel:+79648007745" className={styles.contactLink}>+7 (964) 800-77-45</a></li>
+                            <li><a href="tel:+79648007730" className={styles.contactLink}>+7 (964) 800-77-30</a></li>
+                            <li><a href="tel:+79148715667" className={styles.contactLink}>+7 (914) 871-56-67</a></li>
+                            <li><a href="tel:+79834011238" className={styles.contactLink}>+7 (983) 401-12-38</a></li>
+                        </ul>
                     </div>
                     <div className={styles.contactItem}>
                         <span className={styles.contactLabel}>Email:</span>

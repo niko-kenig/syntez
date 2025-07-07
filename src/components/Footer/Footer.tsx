@@ -35,7 +35,7 @@ const Footer = () => {
                         Email: <a href="mailto:info@syntez.net">info@syntez.net</a>
                     </li>
                     <li>
-                        Телефон: <a href="tel:+73952564497">+7 (3952) 56-44-97</a>
+                        Телефон: <a href="tel:+79648007745">+7 (964) 800-77-45</a>
                     </li>
                 </ul>
 
