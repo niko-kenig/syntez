@@ -68,7 +68,7 @@ const Home = () => {
                         </Card>
                     </div>
                     <div>
-                        <Button onClick={openForm}>Написать нам</Button>
+                        <Button onClick={openForm} className={styles.button_form}>Написать нам</Button>
                     </div>
                     {isFormOpen && (
                         <div style={{
