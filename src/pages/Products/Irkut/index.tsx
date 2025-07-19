@@ -1,18 +1,32 @@
 import styles from './irkut.module.scss';
 import image1 from './../../../assets/images/slider/sozh/image1.jpg';
 import image2 from './../../../assets/images/slider/sozh/image2.jpg';
+import image3 from './../../../assets/images/slider/sozh/image3.webp';
+import Slider from "../../../components/Slider/Slider.tsx";
 
 export const Irkut = () => {
+
+  const arrImg = [image1,image2, image3]
+
   return (
     <div className={styles.taigaContainer}>
       <div className={styles.contentContainer}>
         <h1>Смазочно-охлаждающая жидкость "Иркут"</h1>
-        
+        <div className={styles.sliderContainer}>
+          <Slider
+              arrayImg={arrImg}
+              styleContainer={styles.slider}
+              styleBlock={styles.slide}
+              styledIconContainer={styles.slideImage}
+              caruselStyle={styles.carousel}
+          />
+        </div>
         <div className={styles.contentWrapper}>
           <div className={styles.description}>
             <div className={styles.descriptionBlock}>
               <h2>Применение</h2>
-              <p>Применяется для механической обработки резанием чугуна, сталей и сплавов цветных металлов широкой номенклатуры.</p>
+              <p>Применяется для механической обработки резанием чугуна, сталей и сплавов цветных металлов широкой
+                номенклатуры.</p>
             </div>
 
             <div className={styles.imageContainer}>
@@ -25,11 +39,6 @@ export const Irkut = () => {
                 обработки металлов. Она эффективно справляется с отводом тепла и снижением трения при механической
                 обработке.</p>
               <p>Основные преимущества нашей СОЖ:</p>
-              <img
-                  src={image1}
-                  alt="СОЖ Иркут в применении"
-                  className={styles.imageLeft}
-              />
               <ul className={styles.features}>
                 <li>Поставляется в форме концентрата</li>
                 <li>Разбавляется водой в 20 раз</li>
@@ -53,11 +62,7 @@ export const Irkut = () => {
 
             <div className={styles.benefits}>
               <h2>Рекомендуемые концентрации</h2>
-              <img
-                  src={image2}
-                  alt="Преимущества СОЖ Иркут"
-                  className={styles.imageRight}
-              />
+
               <ul>
                 <li>Лезвийная обработка на ленточнопильных станках – 5-7%</li>
                 <li>Токарные и фрезерные работы – 5%</li>
@@ -71,19 +76,19 @@ export const Irkut = () => {
             <div className={styles.imageContainer}>
               <h2>Преимущества</h2>
               <p>
-                Основное преимущество данной СОЖ перед другими материалами можно описать 
-                фразой «Залил-Забыл». Это значит, что при использовании СОЖ «Иркут» можно 
-                не переживать за закисание, отложения в баке и на стенках трубопроводов 
+                Основное преимущество данной СОЖ перед другими материалами можно описать
+                фразой «Залил-Забыл». Это значит, что при использовании СОЖ «Иркут» можно
+                не переживать за закисание, отложения в баке и на стенках трубопроводов
                 к соплу подачи.
               </p>
               <p>
                 Корректировка концентрации проводится методом простого долива рабочего
-                раствора в изначально залитой в станок пропорции, поскольку полимер и 
+                раствора в изначально залитой в станок пропорции, поскольку полимер и
                 вода выходят из цикла равномерно и пропорционально.
               </p>
               <p>
-                Благодаря своей уникальной формуле, СОЖ «Иркут» обеспечивает стабильную работу 
-                оборудования и продлевает срок его службы, что делает её экономически выгодным 
+                Благодаря своей уникальной формуле, СОЖ «Иркут» обеспечивает стабильную работу
+                оборудования и продлевает срок его службы, что делает её экономически выгодным
                 решением для предприятий любого масштаба.
               </p>
             </div>

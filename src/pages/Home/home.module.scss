@@ -5,13 +5,12 @@ $color-button-bg: #229bf3;
 $color-button-hover-border: #dfe6ea;
 $color-button-hover-shadow: rgb(246, 250, 245);
 $font-primary: 'Montserrat', sans-serif;
-$font-secondary: 'Rubik', sans-serif;
+$font-secondary: 'Arial', sans-serif;
 
 $fadeIn-duration: 1s;
 $fadeIn-easing: ease;
 $fadeIn-fill-mode: forwards;
 
-// Миксин для градиентного текста
 @mixin gradient-text($start-color, $end-color) {
   background: linear-gradient(90deg, $start-color 0%, $end-color 100%);
   -webkit-background-clip: text;
@@ -20,12 +19,10 @@ $fadeIn-fill-mode: forwards;
   color: transparent;
 }
 
-// Миксин для анимации fadeIn
 @mixin fadeIn {
   animation: fadeIn $fadeIn-duration $fadeIn-easing $fadeIn-fill-mode;
 }
 
-// Ключевые кадры анимации
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -79,7 +76,6 @@ $fadeIn-fill-mode: forwards;
       padding: 10px 0;
     }
 
-    // Общие стили для всех slogan
     @mixin slogan-style($font-size, $text-align) {
       letter-spacing: 0.05em;
       font: #{$font-size} $font-primary;
@@ -118,15 +114,14 @@ $fadeIn-fill-mode: forwards;
     }
   }
   .card {
-    //font: 12px $font-secondary;
+
     width: 13rem;
     flex-direction: column;
     display: flex;
     padding-top: 40px;
     margin-left: 5rem;
-    color: transparent; // чтобы текст был прозрачным и показывал градиент
+    color: transparent;
 
-    // Применяем градиент к тексту внутри карточки
     @include gradient-text($color-blue-start, $color-blue-end);
 
     span {
@@ -148,7 +143,6 @@ $fadeIn-fill-mode: forwards;
     .headerSpan {
       font: 34px $font-secondary;
       font-weight: 700;
-      // Если нужно, чтобы заголовок тоже был с градиентом, добавьте:
       @include gradient-text($color-blue-start, $color-blue-end);
     }
   }

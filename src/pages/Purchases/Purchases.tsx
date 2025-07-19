@@ -45,7 +45,7 @@ export const Purchases = () => {
             </div>
 
             <div className={styles.descriptionBlock}>
-              <h2>Оборудование</h2>
+              <h2 className={styles.secondhead}>Оборудование</h2>
               <ul className={styles.features}>
                 <li>Реакторы нержавеющие с обогревающими рубашками от 3,2 м³ до 6,3 м³ (12Х18Н10Т)</li>
                 <li>Стеклянные реакторы от 10 до 50 дм³</li>

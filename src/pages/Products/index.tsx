@@ -58,7 +58,7 @@ const Products = () => {
 
   return (
     <div className={styles.productsContainer}>
-      <h2>Наша Продукция</h2>
+      <h2>Наша Продукты</h2>
       <div className={styles.productsGrid}>
         {products.map((product, index) => (
           <div
